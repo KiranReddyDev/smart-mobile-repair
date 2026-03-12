@@ -1,69 +1,116 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Smart Mobile & Laptop Services | Manikonda</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
 
-body{
-font-family:Arial;
+*{
 margin:0;
-background:#f5f7fb;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins, sans-serif;
 }
 
-/* Header */
+body{
+background:#f4f6fb;
+color:#333;
+}
 
-header{
-background:#111;
+/* HERO */
+
+.hero{
+background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
 color:white;
 text-align:center;
-padding:40px 20px;
+padding:60px 20px;
 }
 
-header h1{
-margin:0;
-font-size:26px;
+.hero h1{
+font-size:28px;
+margin-bottom:10px;
 }
 
-/* Buttons */
+.hero p{
+font-size:16px;
+opacity:0.9;
+}
+
+/* BUTTONS */
+
+.buttons{
+margin-top:20px;
+}
 
 .btn{
-display:block;
-margin:10px auto;
-padding:14px;
-width:80%;
-max-width:300px;
-border-radius:8px;
+display:inline-block;
+margin:6px;
+padding:12px 18px;
+border-radius:30px;
+font-weight:600;
 text-decoration:none;
 color:white;
-font-weight:bold;
-text-align:center;
 }
 
 .call{background:#007bff;}
 .whatsapp{background:#25D366;}
 .map{background:#ff6b00;}
 
-/* Services */
+/* SERVICES */
 
-section{
-padding:20px;
+.container{
+padding:30px 20px;
+max-width:900px;
+margin:auto;
+}
+
+.section-title{
+text-align:center;
+font-size:22px;
+margin-bottom:20px;
+}
+
+.services{
+display:grid;
+grid-template-columns:1fr;
+gap:15px;
 }
 
 .card{
 background:white;
 padding:20px;
-margin-bottom:15px;
-border-radius:10px;
-box-shadow:0 3px 10px rgba(0,0,0,0.1);
+border-radius:12px;
+box-shadow:0 4px 12px rgba(0,0,0,0.08);
 }
 
 .card h3{
-margin-top:0;
+margin-bottom:10px;
 }
 
-/* floating whatsapp */
+/* WHY US */
+
+.why{
+background:white;
+padding:25px;
+border-radius:12px;
+box-shadow:0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* FOOTER */
+
+footer{
+text-align:center;
+padding:20px;
+margin-top:30px;
+background:#111;
+color:white;
+}
+
+/* FLOATING WHATSAPP */
 
 .whatsapp-float{
 position:fixed;
@@ -73,9 +120,15 @@ background:#25D366;
 color:white;
 padding:15px 18px;
 border-radius:50px;
-font-weight:bold;
+font-weight:600;
 text-decoration:none;
-box-shadow:0 4px 10px rgba(0,0,0,0.3);
+box-shadow:0 4px 12px rgba(0,0,0,0.3);
+}
+
+@media(min-width:700px){
+.services{
+grid-template-columns:1fr 1fr 1fr;
+}
 }
 
 </style>
@@ -83,60 +136,76 @@ box-shadow:0 4px 10px rgba(0,0,0,0.3);
 
 <body>
 
-<header>
+<section class="hero">
 
 <h1>Smart Mobile & Laptop Services</h1>
 
-<p>Fast & Reliable Mobile & Laptop Repair in Manikonda</p>
+<p>Fast & Reliable Repair in Manikonda</p>
 
-<a class="btn call" href="tel:+919999999999">📞 Call Now</a>
+<div class="buttons">
 
-<a class="btn whatsapp" href="https://wa.me/919999999999?text=Hello%20I%20need%20mobile%20repair">💬 WhatsApp Booking</a>
+<a class="btn call" href="tel:+919999999999">Call Now</a>
 
-<a class="btn map" href="https://www.google.com/maps/place/SMART+MOBILE+%26+LAPTOP+SERVICES">📍 Get Directions</a>
+<a class="btn whatsapp" href="https://wa.me/919999999999">WhatsApp</a>
 
-</header>
+<a class="btn map"
+href="https://www.google.com/maps/place/SMART+MOBILE+%26+LAPTOP+SERVICES">
+Directions</a>
+
+</div>
+
+</section>
 
 
-<section>
+<div class="container">
 
-<h2>Our Services</h2>
+<h2 class="section-title">Our Services</h2>
+
+<div class="services">
 
 <div class="card">
 <h3>📱 Mobile Repair</h3>
-<p>Screen replacement, battery replacement, charging port repair and software issues.</p>
+<p>Screen replacement, battery issues, charging port repair and software problems.</p>
 </div>
 
 <div class="card">
 <h3>💻 Laptop Repair</h3>
-<p>Motherboard repair, SSD upgrade, Windows installation and overheating fixes.</p>
+<p>Motherboard repair, SSD upgrades, Windows installation and overheating fixes.</p>
 </div>
 
 <div class="card">
-<h3>🏠 Free Doorstep Repair</h3>
-<p>Technician will visit your home and repair your device quickly.</p>
+<h3>🏠 Doorstep Service</h3>
+<p>Get your phone or laptop repaired at home with our doorstep repair service.</p>
 </div>
 
-</section>
+</div>
+
+</div>
 
 
-<section>
+<div class="container">
 
-<h2>Why Choose Us</h2>
+<h2 class="section-title">Why Choose Us</h2>
 
-<div class="card">
+<div class="why">
+
 ✔ Experienced technicians  
-<br>✔ Genuine spare parts  
-<br>✔ Affordable pricing  
-<br>✔ Same day repair  
+<br><br>
+✔ Genuine spare parts  
+<br><br>
+✔ Affordable pricing  
+<br><br>
+✔ Same-day repair service  
+
 </div>
 
-</section>
+</div>
 
 
-<footer style="text-align:center;padding:20px;background:#111;color:white">
+<footer>
 
 Smart Mobile & Laptop Services  
+<br>
 Manikonda, Hyderabad
 
 </footer>
